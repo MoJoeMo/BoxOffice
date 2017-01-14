@@ -1,0 +1,57 @@
+<div class="container">
+        <!--<div class="column container"><h2>Movie Details</h2></div>-->
+    
+    <div class="table container">
+        <div class="column"><img class="film" src="images/filmreel.png"/></div>
+        <div class="column"><h2>Movie Details</h2></div>
+        <div class="column"><img class="film" src="images/filmreel2.png" style="float:right;"/></div>
+    </div><hr />
+    
+    <h2>{{ movie.title }}</h2><br/>
+    <!--<div class="table border">
+        <div class="row">
+            <div class="column"><img class="poster" ng-src="images/{{movie.poster}}.jpg"/></div>
+        </div> 
+    </div>-->
+    <div class="table">
+        <div class="column">
+            <img class="poster" ng-src="images/{{movie.poster}}.jpg"/>
+        </div>
+        
+        <div class="column">
+            <ul class="">
+                <li class="movieinfo animated flipInX">Brought to you by: {{ movie.studio }} Studio</li>
+                <li class="movieinfo animated flipInX">Directed by : {{ movie.director }}</li>
+                <li class="movieinfo animated flipInX">Film Category : {{ movie.genre }}</li>
+                <li class="movieinfo animated flipInX">Rating : {{ movie.rating }}</li>
+                <li class="movieinfo animated flipInX">Total Domestic Gross : {{ movie.gross | currency }}</li>
+            </ul>
+        </div>
+    </div>
+    
+    
+    <!--<div class="left border">
+        <div class=""><img class="poster" ng-src="images/{{movie.poster}}.jpg"/></div>
+    </div>
+    
+    <div class="right">
+        <ul >
+            <li class="movieinfo">Brought to you by: {{ movie.studio }}</li>
+            <li class="movieinfo">Directed by : {{ movie.director }}</li>
+            <li class="movieinfo">Film Category : {{ movie.genre }}</li>
+            <li class="movieinfo">Rating : {{ movie.rating }}</li>
+            <li class="movieinfo">Total Domestic Gross : {{ movie.gross | currency }}</li>
+        </ul>
+    </div>-->
+</div>
+    
+    <!--<div>
+        <ul class="right">
+            <li class="movieinfo">Brought to you by: {{ movie.studio }}</li>
+            <li class="movieinfo">Directed by : {{ movie.director }}</li>
+            <li class="movieinfo">Film Category : {{ movie.genre }}</li>
+            <li class="movieinfo">Rating : {{ movie.rating }}</li>
+            <li class="movieinfo">Total Domestic Gross : {{ movie.gross }}</li>
+        </ul>
+    </div>
+</div>-->

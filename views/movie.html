@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="table">
+        <div class="column"><img class="film" src="images/filmreel.png"/></div>
+        <div class="column"><h2>{{ appSettings.title }}</h2></div>
+        <div class="column"><img class="film" src="images/filmreel2.png" style="float:right;"/></div>
+    </div><hr />
+    
+    <ul>
+        <li>Search by Movie Title: <input id="search" type="text" ng-model="movieFilter.title"/></li>
+    </ul>
+    
+    <br /><br />
+
+    <ul class="animated flipInX" ng-repeat="movie in movies | filter:movieFilter | orderBy:sortBy:reverse">
+        <li><span style="float:left;">{{ movie.rank }}</span> {{ movie.title }} 
+            <a href="#/moviepage/{{ movie.rank }}"><img class="icon" ng-src="{{ movie.icon }}"/><img id="arrow" src="images/arrow_png.png"/></a>
+        </li>
+    </ul>
+    <br />
+</div>
+<div class="container">
+    <span>Total Movies: {{ movies.length }}</span><br />
+    <footer>{{ appSettings.architect }}</footer>
+</div>
